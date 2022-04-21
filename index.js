@@ -12,7 +12,7 @@ connectToDatabase();
 app.use(express.json());
 app.use(
   cors({
-    origin: 'https://medicbank-server.herokuapp.com/',
+    origin: '*',
   }),
 );
 app.use('/medic', route);
