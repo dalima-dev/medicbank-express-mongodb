@@ -10,7 +10,7 @@ const app = express();
 connectToDatabase();
 
 app.use(express.json());
-app.use(cors({ origin: '*', allowedHeaders: ['Content-Type'] }));
+app.use(cors);
 app.use('/medic', route);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
