@@ -10,7 +10,11 @@ const app = express();
 connectToDatabase();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://medicbank-server.herokuapp.com/',
+  }),
+);
 app.use('/medic', route);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
